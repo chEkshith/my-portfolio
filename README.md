@@ -123,7 +123,7 @@ portfolio/
 
 ---
 
-## Author
+<!-- ## Author
 
 **Aakarsh Bibhaw**  
 CSE Sophomore | Full Stack Developer | WebGL Enthusiast
@@ -131,19 +131,19 @@ CSE Sophomore | Full Stack Developer | WebGL Enthusiast
 - LinkedIn: [@aakarsh-bibhaw](https://linkedin.com/in/aakarsh-bibhaw)
 - GitHub: [@arshbibhaw](https://github.com/arshbibhaw)
 - LeetCode: [@arshbibhaw](https://leetcode.com/arshbibhaw)
-- HackerRank: [@arshbibhaw](https://hackerrank.com/arshbibhaw)
+- HackerRank: [@arshbibhaw](https://hackerrank.com/arshbibhaw) -->
 
 ---
 
-## Acknowledgments
+<!-- ## Acknowledgments
 
 - **Three.js Team** - 3D graphics library
 - **GreenSock (GSAP)** - Animation framework
 - **Resend** - Email backend infrastructure
 - **Font Awesome & Devicon** - Icon libraries
 
----
-
+--- -->
+<!-- 
 <div align="center">
   
   **Star this repo if you found the 3D effects impressive!**
@@ -152,4 +152,4 @@ CSE Sophomore | Full Stack Developer | WebGL Enthusiast
   
   © 2026 All Rights Reserved
   
-</div>
+</div> -->
