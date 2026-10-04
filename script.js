@@ -194,64 +194,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const btn = contactForm.querySelector('button');
+        const originalText = btn.innerHTML;
 
-            const btn = contactForm.querySelector('button');
-            const originalText = btn.innerHTML;
+        btn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
+        btn.style.opacity = '0.7';
+        btn.style.pointerEvents = 'none';
 
-            btn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
-            btn.style.opacity = '0.7';
-            btn.style.pointerEvents = 'none';
+        const formData = new FormData(contactForm);
+        formData.append("access_key", "f8aa21c3-a487-4944-badd-0724ae8e73b6");
+        formData.append("subject", "New Portfolio Message");
+        formData.append("from_name", formData.get("name"));
 
-            const formData = new FormData(contactForm);
-            const object = Object.fromEntries(formData);
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+            const data = await response.json();
 
-            const json = JSON.stringify(object);
-
-            fetch('/api/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-                .then(async (response) => {
-                    let json = await response.json();
-                    if (response.status == 200) {
-
-                        btn.innerHTML = '<span>Message Delivered!</span> <i class="fa-solid fa-check"></i>';
-                        btn.style.background = 'linear-gradient(90deg, #22c55e, #16a34a, #22c55e)';
-                        btn.style.borderColor = '#4ade80';
-                        contactForm.reset();
-                        if (window.soundSystem) window.soundSystem.playSuccess();
-                    } else {
-
-                        btn.innerHTML = '<span>Error, Please Retry!</span> <i class="fa-solid fa-triangle-exclamation"></i>';
-                        btn.style.background = 'linear-gradient(90deg, #ef4444, #dc2626, #ef4444)';
-                        if (window.soundSystem) window.soundSystem.playError();
-                    }
-                })
-                .catch(error => {
-
-                    btn.innerHTML = '<span>Error!</span> <i class="fa-solid fa-triangle-exclamation"></i>';
-                    btn.style.background = 'linear-gradient(90deg, #ef4444, #dc2626, #ef4444)';
-                    if (window.soundSystem) window.soundSystem.playError();
-                })
-                .finally(() => {
-
-                    setTimeout(() => {
-                        btn.innerHTML = originalText;
-                        btn.style.background = '';
-                        btn.style.borderColor = '';
-                        btn.style.opacity = '1';
-                        btn.style.pointerEvents = 'all';
-                    }, 3000);
-                });
-        });
-    }
+            if (data.success) {
+                btn.innerHTML = '<span>Message Delivered!</span> <i class="fa-solid fa-check"></i>';
+                btn.style.background = 'linear-gradient(90deg, #22c55e, #16a34a, #22c55e)';
+                btn.style.borderColor = '#4ade80';
+                contactForm.reset();
+                if (window.soundSystem) window.soundSystem.playSuccess();
+            } else {
+                btn.innerHTML = '<span>Error, Please Retry!</span> <i class="fa-solid fa-triangle-exclamation"></i>';
+                btn.style.background = 'linear-gradient(90deg, #ef4444, #dc2626, #ef4444)';
+            }
+        } catch (error) {
+            btn.innerHTML = '<span>Error!</span> <i class="fa-solid fa-triangle-exclamation"></i>';
+            btn.style.background = 'linear-gradient(90deg, #ef4444, #dc2626, #ef4444)';
+        } finally {
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+                btn.style.borderColor = '';
+                btn.style.opacity = '1';
+                btn.style.pointerEvents = 'all';
+            }, 3000);
+        }
+    });
+}
 
     const resumeModal = document.getElementById('resumeModal');
     const openResumeBtn = document.getElementById('openResumeBtn');
