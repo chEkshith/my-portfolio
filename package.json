@@ -1,7 +1,7 @@
 {
-  "name": "devhq-portfolio",
+  "name": "ekshith-portfolio",
   "version": "1.0.0",
-  "description": "DevHQ Personal Portfolio Website by Aakarsh Bibhaw",
+  "description": "Personal Portfolio Website by Ekshith",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arshbibhaw/DevHQ-Personal-Portfolio-Website.git"
+    "url": "git+https://github.com/chEkshith/my-portfolio.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["portfolio", "developer", "ekshith"],
+  "author": "Ekshith",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/arshbibhaw/DevHQ-Personal-Portfolio-Website/issues"
+    "url": "https://github.com/chEkshith/my-portfolio/issues"
   },
-  "homepage": "https://github.com/arshbibhaw/DevHQ-Personal-Portfolio-Website#readme",
+  "homepage": "https://github.com/chEkshith/my-portfolio#readme",
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0"
