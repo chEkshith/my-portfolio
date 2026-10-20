@@ -11,7 +11,7 @@
   ![Vercel](https://img.shields.io/badge/Vercel-Serverless-black?logo=vercel&logoColor=white)
   ![Resend](https://img.shields.io/badge/Resend-Email_API-white?logo=minutemailer)
   
-  <p><strong>Professional Portfolio with 3D WebGL Starfield, GSAP Scroll Animations, and Secure Serverless Architecture!</strong></p>
+  <p><strong>Professional Portfolio with 3D WebGL Starfield, GSAP Scroll Animations, and Secure Serverless Architecture</strong></p>
   
 </div>
 
