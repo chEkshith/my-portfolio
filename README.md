@@ -9,7 +9,7 @@
   ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
   ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
   ![Vercel](https://img.shields.io/badge/Vercel-Serverless-black?logo=vercel&logoColor=white)
-  ![Resend](https://img.shields.io/badge/Resend-Email_API-white?logo=minutemailer)
+  <!--![Resend](https://img.shields.io/badge/Resend-Email_API-white?logo=minutemailer) -->
   
   <p><strong>Professional Portfolio with 3D WebGL Starfield, GSAP Scroll Animations, and Secure Serverless Architecture</strong></p>
   
