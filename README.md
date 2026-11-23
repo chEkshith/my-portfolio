@@ -20,7 +20,7 @@
 
 ## Overview
 
-A cutting-edge personal portfolio featuring a **3D animated starfield background** built with Three.js and professional **scroll-triggered animations** powered by GSAP. This portfolio showcases advanced web technologies including WebGL rendering, custom particle systems, and sophisticated motion design.
+A cutting-edge personal portfolio featuring a **3D animated starfield background** built with Three.js and professional **scroll-triggered animations** powered by GSAP. This portfolio showcases advanced web technologies including WebGL rendering, custom particle systems, and sophisticated motion design
 
 Beyond the frontend, it features a highly secure, **Vercel Serverless Backend** integrated with the **Resend API** to process contact form submissions without exposing sensitive API keys to the browser.
 
